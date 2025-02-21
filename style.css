@@ -21,21 +21,6 @@ header h1 span {
     color: #1DB954;
 }
 
-.btn {
-    display: inline-block;
-    padding: 12px 25px;
-    background: #1DB954;
-    color: white;
-    text-decoration: none;
-    border-radius: 30px;
-    font-size: 18px;
-    transition: 0.3s;
-}
-
-.btn:hover {
-    background: #17a44b;
-}
-
 section {
     padding: 50px 0;
     border-bottom: 1px solid #333;
@@ -47,6 +32,11 @@ section {
     margin: 20px auto;
     border-radius: 10px;
     width: 80%;
+    transition: transform 0.3s ease;
+}
+
+.project:hover {
+    transform: scale(1.05);
 }
 
 .project a {
@@ -69,6 +59,11 @@ section {
     padding: 10px;
     margin: 5px;
     border-radius: 20px;
+    transition: transform 0.3s ease;
+}
+
+.skills-container span:hover {
+    transform: scale(1.1);
 }
 
 .social-links a {
@@ -87,5 +82,6 @@ section {
 }
 
 .social-links a:hover {
-    background: #1DB954;
+    background: #1DB954;
+    transform: translateY(-3px);
 }
