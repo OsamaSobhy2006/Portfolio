@@ -1,68 +1,170 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My Portfolio</title>
+    <title>Osama Sobhy | Software Engineer Portfolio</title>
+    <meta name="description" content="Portfolio of Osama Sobhy El‑Shahat, a software engineer passionate about problem solving, web development, and building reliable software.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
-    <srcript src="https://kit.fontawesome.com/a076d05300.js" crossorigin="anonymus"></srcript>
+    <script src="https://kit.fontawesome.com/a076d05300.js" crossorigin="anonymous"></script>
 </head>
 <body>
 
+    <header class="site-header">
+        <div class="container header-content">
+            <div class="logo">Osama Sobhy</div>
+            <nav class="nav">
+                <a href="#about">About</a>
+                <a href="#projects">Projects</a>
+                <a href="#skills">Skills</a>
+                <a href="#contact">Contact</a>
+            </nav>
+        </div>
+    </header>
+
+    <main>
     <div class="container">
 
-        <header>
-            <h1>Hi, I'm <span>Osama Sobhy El-Shahat</span></h1>
-            <p>A Software Enginner</p>
-        </header>
+        <section class="hero" id="top">
+            <div class="hero-text">
+                <p class="hero-eyebrow">Software Engineer & CS Student</p>
+                <h1>Hi, I'm <span>Osama Sobhy El‑Shahat</span></h1>
+                <p class="hero-subtitle">
+                    I build reliable web applications, practice strong problem‑solving, and care about
+                    writing clean, maintainable code.
+                </p>
+                <div class="hero-actions">
+                    <a href="#projects" class="btn primary-btn">View Projects</a>
+                    <a href="#contact" class="btn secondary-btn">Contact Me</a>
+                </div>
+            </div>
+        </section>
 
         <section id="about">
             <h2>About Me</h2>
-            <p>I'm Student of faculty of Computer And Information Science,</p>
-            <p>Started My Journey Programming with C/C++ and passionate about problem solving,</p>
-            <p>Currently, I'm trying to improve my technical skills.</p>
+            <p>
+                I'm a Computer Science student at the Faculty of Computers and Information Technology with a strong
+                interest in software engineering and problem solving.
+            </p>
+            <p>
+                I started my programming journey with C/C++ and expanded into Python, modern web technologies, and
+                backend development. I enjoy understanding how things work under the hood and turning ideas into
+                real, usable products.
+            </p>
+            <p>
+                Right now, I'm focused on building real‑world projects, sharpening my algorithms and data structures
+                skills, and following best practices for clean, maintainable code.
+            </p>
+        </section>
+
+        <section id="experience">
+            <h2>Experience & Education</h2>
+            <p>
+                I’m building my experience through university studies and real-world, hands-on training programs.
+            </p>
+            <ul class="timeline">
+                <li>
+                    <h3>Web Design Intern</h3>
+                    <p>National Telecommunication Institute (NTI)</p>
+                    <span class="timeline-meta">Jul 20 – Aug 14, 2025 · Remote</span>
+                    <p class="timeline-description">
+                        Participated in an intensive training program focused on front-end web development, including HTML5,
+                        CSS3, JavaScript, Bootstrap, and a basic understanding of APIs and AJAX. Gained practical experience
+                        by working on real-world projects and building fully responsive websites, improving coding skills
+                        through hands-on exercises and guided project work.
+                    </p>
+                </li>
+                <li>
+                    <h3>Faculty of Computers and Information Technology</h3>
+                    <p>Computer Science Student</p>
+                    <span class="timeline-meta">Zagazig University · In progress</span>
+                </li>
+            </ul>
         </section>
 
         <section id="projects">
             <h2>Projects</h2>
-            <div class="project">
-                <h3>CS50 - Finance</h3>
-                <a href="https://github.com/OsamaSobhy2006/CS50-Finance.git" target="_blank">View on GitHub</a>
-            </div>
-            <div class="project">
-                <h3>To Do App</h3>
-                <a href="https://github.com/OsamaSobhy2006/todo.git" target="_blank">View on GitHub</a>
+            <div class="projects-grid">
+                <article class="project">
+                    <h3>Ecommerce-Database-SQLite</h3>
+                    <p>A relational e-commerce database built with SQLite, featuring normalized schema, constraints, indexes, and triggers to ensure data integrity and performance.</p>
+                    <a href="https://github.com/OsamaSobhy2006/Ecommerce-Database-SQLite.git" target="_blank" class="project-link">
+                        <i class="fab fa-github"></i> View on GitHub
+                    </a>
+                </article>
+                <article class="project">
+                    <h3>School-Management-System</h3>
+                    <p>A C++ console-based School Management System built with OOP principles, supporting student enrollment, course management, and authentication.</p>
+                    <a href="https://github.com/OsamaSobhy2006/School-Management-System.git" target="_blank" class="project-link">
+                        <i class="fab fa-github"></i> View on GitHub
+                    </a>
+                </article>
+                <article class="project">
+                    <h3>WebVerse</h3>
+                    <p>A business website developed using HTML, CSS, Bootstrap, and JavaScript. Includes a collapse component and a clean, modern design.</p>
+                    <a href="https://github.com/OsamaSobhy2006/WebVerse.git" target="_blank" class="project-link">
+                        <i class="fab fa-github"></i> View on GitHub
+                    </a>
+                </article>
+                <article class="project">
+                    <h3>To Do App</h3>
+                    <p>A simple task management application that lets users add, complete, and remove todos with a clean interface.</p>
+                    <a href="https://github.com/OsamaSobhy2006/todo.git" target="_blank" class="project-link">
+                        <i class="fab fa-github"></i> View on GitHub
+                    </a>
+                </article>
             </div>
         </section>
 
         <section id="skills">
             <h2>Skills</h2>
+            <p>Technologies and tools I work with or am currently learning:</p>
             <div class="skills-container">
-                <span>HTML</span>
-                <span>CSS</span>
-                <span>JavaScript</span>
-                <span>Bootstrap</span>
-                <span>Python</span>
-                <span>SQL</span>
-                <span>C/C++</span>
-                <span>C#</span>
-                <span>Django</span>
+                <span><img class="skill-logo" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/cplusplus/cplusplus-original.svg" alt="C / C++ logo">C / C++</span>
+                <span><img class="skill-logo" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/csharp/csharp-original.svg" alt="C# logo">C#</span>
+                <span><img class="skill-logo" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg" alt="HTML5 logo">HTML</span>
+                <span><img class="skill-logo" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg" alt="CSS3 logo">CSS</span>
+                <span><img class="skill-logo" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg" alt="JavaScript logo">JavaScript</span>
+                <span><img class="skill-logo" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/typescript/typescript-original.svg" alt="TypeScript logo">TypeScript</span>
+                <span><img class="skill-logo" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/bootstrap/bootstrap-original.svg" alt="Bootstrap logo">Bootstrap</span>
+                <span><img class="skill-logo" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg" alt="Python logo">Python</span>
+                <span><img class="skill-logo" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/django/django-plain.svg" alt="Django logo">Django</span>
+                <span><img class="skill-logo" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg" alt="Git logo">Git & GitHub</span>
+                <span><img class="skill-logo" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/sqlite/sqlite-original.svg" alt="SQLite logo">SQLite</span>
+                <span><img class="skill-logo" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original.svg" alt="MySQL logo">MySQL</span>
+                <span><img class="skill-logo" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/postgresql/postgresql-original.svg" alt="PostgreSQL logo">PostgreSQL</span>
             </div>
         </section>
 
         <section id="contact">
             <h2>Contact Me</h2>
             <div class="social-links">
-                <a href="https://github.com/OsamaSobhy2006" target="_blank"><i class="fab fa-github"></i> GitHub</a>
-                <a href="https://www.linkedin.com/in/osama-sobhy-b569b7332?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" target="_blank"><i class="fab fa-linkedin"></i> LinkedIn</a>
-                <a href="mailto:osamasobhy2906@gmail.com"><i class="fas fa-envelope"></i> Email</a>
-                <a href="https://wa.me/201023848309" target="_blank"><i class="fab fa-whatsapp"></i> WhatsApp</a>
+                <a class="contact-link github" href="https://github.com/OsamaSobhy2006" target="_blank">
+                    <span>GitHub</span>
+                </a>
+                <a class="contact-link linkedin" href="https://www.linkedin.com/in/osama-sobhy-b569b7332?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" target="_blank">
+                    <span>LinkedIn</span>
+                </a>
+                <a class="contact-link email" href="mailto:osamasobhy2906@gmail.com">
+                    <span>Email</span>
+                </a>
+                <a class="contact-link whatsapp" href="https://wa.me/201023848309" target="_blank">
+                    <span>WhatsApp</span>
+                </a>
             </div>
         </section>
 
     </div>
+    </main>
+
+    <footer class="site-footer">
+        <div class="container">
+            <p>&copy; <span id="year"></span> Osama Sobhy El‑Shahat &middot; Designed and built by Osama Sobhy.</p>
+        </div>
+    </footer>
 
     <script src="script.js"></script>
-
 </body>
 </html>
