@@ -1,0 +1,637 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Osama Sobhy El-Shahat - Software Engineer & MEAN Stack Developer. Full-stack web apps with Angular, Node.js, Express, and MongoDB.">
+  <meta name="keywords" content="Software Engineer, MEAN Stack Developer, Angular, Node.js, MongoDB, Osama Sobhy">
+  <meta name="author" content="Osama Sobhy El-Shahat">
+  <meta name="theme-color" content="#6366f1">
+  <title>Osama Sobhy | Software Engineer</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <!-- Loading Screen -->
+  <div id="loader" class="loader" aria-hidden="true">
+    <div class="loader__inner">
+      <div class="loader__logo">&lt;OS /&gt;</div>
+      <div class="loader__bar"><div class="loader__progress"></div></div>
+      <div class="loader__text">Loading portfolio...</div>
+    </div>
+  </div>
+
+  <!-- Custom Cursor -->
+  <div class="cursor" id="cursor" aria-hidden="true"></div>
+  <div class="cursor-follower" id="cursorFollower" aria-hidden="true"></div>
+
+  <!-- Background Shapes -->
+  <div class="bg-shapes" aria-hidden="true">
+    <div class="shape shape--1"></div>
+    <div class="shape shape--2"></div>
+    <div class="shape shape--3"></div>
+    <div class="particles" id="particles"></div>
+  </div>
+
+  <!-- Navigation -->
+  <header class="header" id="header">
+    <nav class="nav container" aria-label="Main navigation">
+      <a href="#home" class="nav__logo" aria-label="Home">
+        <span class="nav__logo-bracket">&lt;</span>OS<span class="nav__logo-bracket">/&gt;</span>
+      </a>
+      <ul class="nav__menu" id="navMenu">
+        <li><a href="#home" class="nav__link active">Home</a></li>
+        <li><a href="#about" class="nav__link">About</a></li>
+        <li><a href="#education" class="nav__link">Education</a></li>
+        <li><a href="#experience" class="nav__link">Experience</a></li>
+        <li><a href="#skills" class="nav__link">Skills</a></li>
+        <li><a href="#projects" class="nav__link">Projects</a></li>
+        <li><a href="#certificates" class="nav__link">Certificates</a></li>
+        <li><a href="#services" class="nav__link">Services</a></li>
+        <li><a href="#contact" class="nav__link">Contact</a></li>
+      </ul>
+      <div class="nav__actions">
+        <button class="theme-toggle" id="themeToggle" type="button" aria-label="Toggle dark mode">
+          <i class="fas fa-moon" aria-hidden="true"></i>
+        </button>
+        <button class="nav__toggle" id="navToggle" type="button" aria-label="Toggle menu" aria-expanded="false">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </nav>
+  </header>
+
+  <main>
+    <!-- Home -->
+    <section class="hero section" id="home">
+      <div class="container hero__container">
+        <div class="hero__content reveal">
+          <p class="hero__greeting">Hi, I'm</p>
+          <h1 class="hero__title">Osama <span class="gradient-text">Sobhy</span></h1>
+          <p class="hero__subtitle">
+            I'm a <span class="typing-text" id="typingText" aria-live="polite"></span><span class="typing-cursor">|</span>
+          </p>
+          <p class="hero__description">
+            Aspiring Full-Stack MEAN Stack Developer building scalable web applications with Angular, Node.js, Express.js, and MongoDB focused on clean code and real-world projects.
+          </p>
+          <div class="hero__cta">
+            <a href="assets/cv/Osama_Sobhy_CV.pdf" class="btn btn--primary" download>
+              <i class="fas fa-download" aria-hidden="true"></i> Download CV
+            </a>
+            <a href="#contact" class="btn btn--outline">
+              <i class="fas fa-envelope" aria-hidden="true"></i> Contact Me
+            </a>
+          </div>
+          <div class="hero__social">
+            <a href="https://github.com/OsamaSobhy2006" target="_blank" rel="noopener noreferrer" aria-label="GitHub"><i class="fab fa-github"></i></a>
+            <a href="https://www.linkedin.com/in/osama-sobhy-b569b7332?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+            <a href="mailto:osamasobhy2906@gmail.com" aria-label="Email"><i class="fas fa-envelope"></i></a>
+          </div>
+        </div>
+        <div class="hero__image reveal reveal--delay">
+          <div class="hero__image-wrapper glass hero__image-wrapper--photo">
+            <img src="assets/images/osama-portrait.png" alt="Professional portrait of Osama Sobhy El-Shahat in formal attire" width="400" height="500" loading="eager">
+            <div class="hero__badge hero__badge--1"><i class="fas fa-code"></i></div>
+            <div class="hero__badge hero__badge--2"><i class="fas fa-laptop-code"></i></div>
+            <div class="hero__badge hero__badge--3"><i class="fas fa-rocket"></i></div>
+          </div>
+        </div>
+      </div>
+      <a href="#about" class="hero__scroll" aria-label="Scroll to about section">
+        <i class="fas fa-chevron-down"></i>
+      </a>
+    </section>
+
+    <!-- About -->
+    <section class="about section" id="about">
+      <div class="container">
+        <header class="section__header reveal">
+          <span class="section__tag">About Me</span>
+          <h2 class="section__title">Know Who <span class="gradient-text">I Am</span></h2>
+        </header>
+        <div class="about__grid">
+          <div class="about__text reveal">
+            <p>
+              I'm <strong>Osama Sobhy El-Shahat</strong>, an aspiring Full-Stack MEAN Stack Developer with hands-on experience building scalable web applications using Angular, Node.js, Express.js, and MongoDB.
+            </p>
+            <p>
+              I specialize in responsive user interfaces, secure authentication systems, RESTful APIs, and full-stack application architecture. I'm passionate about problem-solving, clean code practices, and continuously learning through real-world projects.
+            </p>
+            <p>
+              Strong in problem solving, critical thinking, teamwork, and fast learning. <strong>Arabic</strong> (native) <strong>English</strong> (intermediate).
+            </p>
+          </div>
+          <div class="about__info reveal reveal--delay">
+            <div class="info-card glass">
+              <span class="info-card__label">Name</span>
+              <span class="info-card__value">Osama Sobhy El-Shahat</span>
+            </div>
+            <div class="info-card glass">
+              <span class="info-card__label">Role</span>
+              <span class="info-card__value">Software Engineer</span>
+            </div>
+            <div class="info-card glass">
+              <span class="info-card__label">City</span>
+              <span class="info-card__value">Cairo, Egypt</span>
+            </div>
+            <div class="info-card glass">
+              <span class="info-card__label">Email</span>
+              <span class="info-card__value">osamasobhy2906@gmail.com</span>
+            </div>
+            <div class="info-card glass">
+              <span class="info-card__label">Phone</span>
+              <span class="info-card__value">01023848309</span>
+            </div>
+          </div>
+        </div>
+        <div class="stats reveal">
+          <div class="stat-card glass">
+            <span class="stat-card__number" data-target="23">0</span>
+            <span class="stat-card__label">Projects Completed</span>
+          </div>
+          <div class="stat-card glass">
+            <span class="stat-card__number" data-target="7">0</span>
+            <span class="stat-card__label">Certificates Earned</span>
+          </div>
+          <div class="stat-card glass">
+            <span class="stat-card__number" data-target="20">0</span>
+            <span class="stat-card__label">Technologies Learned</span>
+          </div>
+          <div class="stat-card glass">
+            <span class="stat-card__number" data-target="4">0</span>
+            <span class="stat-card__label">Training Programs</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Education -->
+    <section class="education section" id="education">
+      <div class="container">
+        <header class="section__header reveal">
+          <span class="section__tag">Education</span>
+          <h2 class="section__title">My <span class="gradient-text">Academic Journey</span></h2>
+        </header>
+        <div class="timeline">
+          <article class="timeline__item reveal">
+            <div class="timeline__marker"></div>
+            <div class="timeline__content glass">
+              <span class="timeline__date">Expected June 2027</span>
+              <h3 class="timeline__title">Bachelor of Computer Science</h3>
+              <p class="timeline__org">Faculty of Computers and Informatics Zagazig University, Egypt</p>
+              <p class="timeline__gpa"><strong>GPA:</strong> 3.18 / 4.0 (Very Good)</p>
+              <ul class="timeline__list">
+                <li>Data Structures & Algorithms</li>
+                <li>Web Development & Databases</li>
+                <li>Software Engineering & OOP</li>
+                <li>Operating Systems & Networks</li>
+              </ul>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- Experience -->
+    <section class="experience section" id="experience">
+      <div class="container">
+        <header class="section__header reveal">
+          <span class="section__tag">Experience</span>
+          <h2 class="section__title">Professional <span class="gradient-text">Journey</span></h2>
+        </header>
+        <div class="experience__grid">
+          <article class="exp-card glass reveal">
+            <div class="exp-card__icon"><i class="fas fa-server"></i></div>
+            <span class="exp-card__date">Mar 2026 Present On-site</span>
+            <h3 class="exp-card__title">MEAN Stack Trainee</h3>
+            <p class="exp-card__company">National Telecommunication Institute (NTI)</p>
+            <ul class="exp-card__list">
+              <li>Intensive MEAN Stack training (MongoDB, Express.js, Angular, Node.js)</li>
+              <li>Building full-stack web applications and enhancing backend skills</li>
+              <li>Applying REST APIs, authentication, and scalable architecture patterns</li>
+            </ul>
+            <div class="exp-card__tech">
+              <span>MongoDB</span><span>Express.js</span><span>Angular</span><span>Node.js</span><span>TypeScript</span>
+            </div>
+          </article>
+          <article class="exp-card glass reveal">
+            <div class="exp-card__icon"><i class="fas fa-briefcase"></i></div>
+            <span class="exp-card__date">Jul 20 Aug 14, 2025 Remote</span>
+            <h3 class="exp-card__title">Web Design Trainee</h3>
+            <p class="exp-card__company">National Telecommunication Institute (NTI)</p>
+            <ul class="exp-card__list">
+              <li>Front-end development with HTML5, CSS3, JavaScript, and Bootstrap</li>
+              <li>Built fully responsive real-world websites and guided projects</li>
+              <li>Gained practical experience with APIs, AJAX, and hands-on exercises</li>
+            </ul>
+            <div class="exp-card__tech">
+              <span>HTML</span><span>CSS</span><span>JavaScript</span><span>Bootstrap</span>
+            </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Skills -->
+    <section class="skills section" id="skills">
+      <div class="container">
+        <header class="section__header reveal">
+          <span class="section__tag">Skills</span>
+          <h2 class="section__title">Technical <span class="gradient-text">Expertise</span></h2>
+        </header>
+        <div class="skills__categories">
+          <div class="skill-category reveal">
+            <h3 class="skill-category__title"><i class="fas fa-palette"></i> Frontend</h3>
+            <div class="skill-category__grid">
+              <div class="skill-item glass" data-percent="95">
+                <div class="skill-item__circle"><svg viewBox="0 0 100 100"><circle class="skill-item__bg" cx="50" cy="50" r="45"/><circle class="skill-item__progress" cx="50" cy="50" r="45"/></svg><span class="skill-item__percent">95%</span></div>
+                <span class="skill-item__name">HTML</span>
+                <div class="skill-bar"><div class="skill-bar__fill" style="--w:95%"></div></div>
+              </div>
+              <div class="skill-item glass" data-percent="92">
+                <div class="skill-item__circle"><svg viewBox="0 0 100 100"><circle class="skill-item__bg" cx="50" cy="50" r="45"/><circle class="skill-item__progress" cx="50" cy="50" r="45"/></svg><span class="skill-item__percent">92%</span></div>
+                <span class="skill-item__name">CSS</span>
+                <div class="skill-bar"><div class="skill-bar__fill" style="--w:92%"></div></div>
+              </div>
+              <div class="skill-item glass" data-percent="88">
+                <div class="skill-item__circle"><svg viewBox="0 0 100 100"><circle class="skill-item__bg" cx="50" cy="50" r="45"/><circle class="skill-item__progress" cx="50" cy="50" r="45"/></svg><span class="skill-item__percent">88%</span></div>
+                <span class="skill-item__name">JavaScript</span>
+                <div class="skill-bar"><div class="skill-bar__fill" style="--w:88%"></div></div>
+              </div>
+              <div class="skill-item glass" data-percent="80">
+                <div class="skill-item__circle"><svg viewBox="0 0 100 100"><circle class="skill-item__bg" cx="50" cy="50" r="45"/><circle class="skill-item__progress" cx="50" cy="50" r="45"/></svg><span class="skill-item__percent">80%</span></div>
+                <span class="skill-item__name">TypeScript</span>
+                <div class="skill-bar"><div class="skill-bar__fill" style="--w:80%"></div></div>
+              </div>
+              <div class="skill-item glass" data-percent="78">
+                <div class="skill-item__circle"><svg viewBox="0 0 100 100"><circle class="skill-item__bg" cx="50" cy="50" r="45"/><circle class="skill-item__progress" cx="50" cy="50" r="45"/></svg><span class="skill-item__percent">78%</span></div>
+                <span class="skill-item__name">Angular</span>
+                <div class="skill-bar"><div class="skill-bar__fill" style="--w:78%"></div></div>
+              </div>
+              <div class="skill-item glass" data-percent="85">
+                <div class="skill-item__circle"><svg viewBox="0 0 100 100"><circle class="skill-item__bg" cx="50" cy="50" r="45"/><circle class="skill-item__progress" cx="50" cy="50" r="45"/></svg><span class="skill-item__percent">85%</span></div>
+                <span class="skill-item__name">Bootstrap</span>
+                <div class="skill-bar"><div class="skill-bar__fill" style="--w:85%"></div></div>
+              </div>
+            </div>
+          </div>
+          <div class="skill-category reveal">
+            <h3 class="skill-category__title"><i class="fas fa-server"></i> Backend</h3>
+            <div class="skill-category__grid">
+              <div class="skill-item glass" data-percent="75"><div class="skill-item__circle"><svg viewBox="0 0 100 100"><circle class="skill-item__bg" cx="50" cy="50" r="45"/><circle class="skill-item__progress" cx="50" cy="50" r="45"/></svg><span class="skill-item__percent">75%</span></div><span class="skill-item__name">Node.js</span><div class="skill-bar"><div class="skill-bar__fill" style="--w:75%"></div></div></div>
+              <div class="skill-item glass" data-percent="72"><div class="skill-item__circle"><svg viewBox="0 0 100 100"><circle class="skill-item__bg" cx="50" cy="50" r="45"/><circle class="skill-item__progress" cx="50" cy="50" r="45"/></svg><span class="skill-item__percent">72%</span></div><span class="skill-item__name">Express.js</span><div class="skill-bar"><div class="skill-bar__fill" style="--w:72%"></div></div></div>
+              <div class="skill-item glass" data-percent="70"><div class="skill-item__circle"><svg viewBox="0 0 100 100"><circle class="skill-item__bg" cx="50" cy="50" r="45"/><circle class="skill-item__progress" cx="50" cy="50" r="45"/></svg><span class="skill-item__percent">70%</span></div><span class="skill-item__name">Django</span><div class="skill-bar"><div class="skill-bar__fill" style="--w:70%"></div></div></div>
+              <div class="skill-item glass" data-percent="65"><div class="skill-item__circle"><svg viewBox="0 0 100 100"><circle class="skill-item__bg" cx="50" cy="50" r="45"/><circle class="skill-item__progress" cx="50" cy="50" r="45"/></svg><span class="skill-item__percent">65%</span></div><span class="skill-item__name">Flask</span><div class="skill-bar"><div class="skill-bar__fill" style="--w:65%"></div></div></div>
+            </div>
+          </div>
+          <div class="skill-category reveal">
+            <h3 class="skill-category__title"><i class="fas fa-database"></i> Database</h3>
+            <div class="skill-category__grid">
+              <div class="skill-item glass" data-percent="78"><div class="skill-item__circle"><svg viewBox="0 0 100 100"><circle class="skill-item__bg" cx="50" cy="50" r="45"/><circle class="skill-item__progress" cx="50" cy="50" r="45"/></svg><span class="skill-item__percent">78%</span></div><span class="skill-item__name">MongoDB</span><div class="skill-bar"><div class="skill-bar__fill" style="--w:78%"></div></div></div>
+              <div class="skill-item glass" data-percent="76"><div class="skill-item__circle"><svg viewBox="0 0 100 100"><circle class="skill-item__bg" cx="50" cy="50" r="45"/><circle class="skill-item__progress" cx="50" cy="50" r="45"/></svg><span class="skill-item__percent">76%</span></div><span class="skill-item__name">PostgreSQL</span><div class="skill-bar"><div class="skill-bar__fill" style="--w:76%"></div></div></div>
+              <div class="skill-item glass" data-percent="76"><div class="skill-item__circle"><svg viewBox="0 0 100 100"><circle class="skill-item__bg" cx="50" cy="50" r="45"/><circle class="skill-item__progress" cx="50" cy="50" r="45"/></svg><span class="skill-item__percent">76%</span></div><span class="skill-item__name">MySQL</span><div class="skill-bar"><div class="skill-bar__fill" style="--w:76%"></div></div></div>
+              <div class="skill-item glass" data-percent="76"><div class="skill-item__circle"><svg viewBox="0 0 100 100"><circle class="skill-item__bg" cx="50" cy="50" r="45"/><circle class="skill-item__progress" cx="50" cy="50" r="45"/></svg><span class="skill-item__percent">76%</span></div><span class="skill-item__name">SQLite</span><div class="skill-bar"><div class="skill-bar__fill" style="--w:76%"></div></div></div>
+            </div>
+          </div>
+          <div class="skill-category reveal">
+            <h3 class="skill-category__title"><i class="fas fa-tools"></i> Tools</h3>
+            <div class="skill-category__grid skill-category__grid--tools">
+              <div class="skill-item glass skill-item--compact" data-percent="90"><div class="skill-item__circle"><svg viewBox="0 0 100 100"><circle class="skill-item__bg" cx="50" cy="50" r="45"/><circle class="skill-item__progress" cx="50" cy="50" r="45"/></svg><span class="skill-item__percent">90%</span></div><span class="skill-item__name">Git</span></div>
+              <div class="skill-item glass skill-item--compact" data-percent="88"><div class="skill-item__circle"><svg viewBox="0 0 100 100"><circle class="skill-item__bg" cx="50" cy="50" r="45"/><circle class="skill-item__progress" cx="50" cy="50" r="45"/></svg><span class="skill-item__percent">88%</span></div><span class="skill-item__name">GitHub</span></div>
+              <div class="skill-item glass skill-item--compact" data-percent="95"><div class="skill-item__circle"><svg viewBox="0 0 100 100"><circle class="skill-item__bg" cx="50" cy="50" r="45"/><circle class="skill-item__progress" cx="50" cy="50" r="45"/></svg><span class="skill-item__percent">95%</span></div><span class="skill-item__name">VS Code</span></div>
+              <div class="skill-item glass skill-item--compact" data-percent="82"><div class="skill-item__circle"><svg viewBox="0 0 100 100"><circle class="skill-item__bg" cx="50" cy="50" r="45"/><circle class="skill-item__progress" cx="50" cy="50" r="45"/></svg><span class="skill-item__percent">82%</span></div><span class="skill-item__name">Linux</span></div>
+              <div class="skill-item glass skill-item--compact" data-percent="75"><div class="skill-item__circle"><svg viewBox="0 0 100 100"><circle class="skill-item__bg" cx="50" cy="50" r="45"/><circle class="skill-item__progress" cx="50" cy="50" r="45"/></svg><span class="skill-item__percent">75%</span></div><span class="skill-item__name">Vim</span></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Projects -->
+    <section class="projects section" id="projects">
+      <div class="container">
+        <header class="section__header reveal">
+          <span class="section__tag">Portfolio</span>
+          <h2 class="section__title">Featured <span class="gradient-text">Projects</span></h2>
+        </header>
+        <div class="projects__filters reveal">
+          <button class="filter-btn active" data-filter="all" type="button">All</button>
+          <button class="filter-btn" data-filter="web" type="button">Web Apps</button>
+          <button class="filter-btn" data-filter="fullstack" type="button">Full Stack</button>
+          <button class="filter-btn" data-filter="ui" type="button">UI/UX</button>
+        </div>
+        <div class="projects__grid" id="projectsGrid">
+          <article class="project-card glass reveal" data-category="fullstack web">
+            <div class="project-card__image">
+              <img src="assets/images/ecommerce.jpg" alt="E-Commerce Website" loading="lazy">
+              <div class="project-card__overlay">
+                <a href="https://github.com/OsamaSobhy2006/CommerceX.git" class="project-card__link" target="_blank" rel="noopener" aria-label="GitHub"><i class="fab fa-github"></i></a>
+              </div>
+            </div>
+            <div class="project-card__body">
+              <h3 class="project-card__title">CommerceX - Full Stack E-Commerce</h3>
+              <p class="project-card__desc">Full-stack e-commerce with JWT auth, OTP verification, Stripe payments, cart &amp; orders, and role-based admin dashboard.</p>
+              <ul class="project-card__features">
+                <li>Product catalog &amp; search</li>
+                <li>Secure payment flow</li>
+                <li>Fully responsive design</li>
+              </ul>
+              <div class="project-card__tech"><span>Angular</span><span>TypeScript</span><span>Node.js</span><span>Express</span><span>MongoDB</span><span>Stripe</span></div>
+              <div class="project-card__actions">
+                <a href="https://github.com/OsamaSobhy2006/CommerceX.git" class="btn btn--sm btn--outline" target="_blank" rel="noopener"><i class="fab fa-github"></i> GitHub</a>
+              </div>
+            </div>
+          </article>
+          <article class="project-card glass reveal" data-category="web">
+            <div class="project-card__image">
+              <img src="assets/images/todo2.jpg" alt="Task Management App" loading="lazy">
+              <div class="project-card__overlay">
+                <a href="https://github.com/OsamaSobhy2006/ToDo.git" class="project-card__link" aria-label="GitHub"><i class="fab fa-github"></i></a>
+              </div>
+            </div>
+            <div class="project-card__body">
+              <h3 class="project-card__title">To-Do List Web Application</h3>
+              <p class="project-card__desc">Django to-do app with routing, views, and templates. Add, view, and delete tasks with session-based storage.</p>
+              <ul class="project-card__features">
+                <li>Board &amp; list views</li>
+                <li>Due dates &amp; priorities</li>
+                <li>Offline-first architecture</li>
+              </ul>
+              <div class="project-card__tech"><span>Django</span><span>Python</span><span>HTML</span><span>CSS</span></div>
+              <div class="project-card__actions">
+                <a href="https://github.com/OsamaSobhy2006/ToDo.git" class="btn btn--sm btn--outline"><i class="fab fa-github"></i> GitHub</a>
+              </div>
+            </div>
+          </article>
+          <article class="project-card glass reveal" data-category="ui web">
+            <div class="project-card__image">
+              <img src="assets/images/Our Portfolio 2024.jpg" alt="Portfolio Website" loading="lazy">
+              <div class="project-card__overlay">
+                <a href="#" class="project-card__link" aria-label="GitHub"><i class="fab fa-github"></i></a>
+              </div>
+            </div>
+            <div class="project-card__body">
+              <h3 class="project-card__title">Portfolio Website</h3>
+              <p class="project-card__desc">Modern developer portfolio with glassmorphism, animations, and theme switching.</p>
+              <ul class="project-card__features">
+                <li>Scroll animations</li>
+                <li>Dark/light mode</li>
+                <li>SEO optimized</li>
+              </ul>
+              <div class="project-card__tech"><span>HTML</span><span>CSS</span><span>JavaScript</span></div>
+              <div class="project-card__actions">
+                <a href="#" class="btn btn--sm btn--outline"><i class="fab fa-github"></i> GitHub</a>
+              </div>
+            </div>
+          </article>
+          <article class="project-card glass reveal" data-category="web fullstack">
+            <div class="project-card__image">
+              <img src="assets/images/graphic design template.jpg" alt="Encyclopedia Project" loading="lazy">
+              <div class="project-card__overlay">
+                <a href="https://web-verse-three.vercel.app/" class="project-card__link" aria-label="Live demo"><i class="fas fa-external-link-alt"></i></a>
+                <a href="https://github.com/OsamaSobhy2006/WebVerse.git" class="project-card__link" aria-label="GitHub"><i class="fab fa-github"></i></a>
+              </div>
+            </div>
+            <div class="project-card__body">
+              <h3 class="project-card__title">WebVerse Business Website</h3>
+              <p class="project-card__desc">Business website with HTML, CSS, Bootstrap, and JavaScript collapse components and clean modern design.</p>
+              <ul class="project-card__features">
+                <li>Dynamic search</li>
+                <li>Category filtering</li>
+                <li>API-driven content</li>
+              </ul>
+              <div class="project-card__tech"><span>HTML</span><span>CSS</span><span>JavaScript</span><span>Bootstrap</span></div>
+              <div class="project-card__actions">
+                <a href="https://web-verse-three.vercel.app/" class="btn btn--sm btn--primary"><i class="fas fa-globe"></i> Live Demo</a>
+                <a href="https://github.com/OsamaSobhy2006/WebVerse.git" class="btn btn--sm btn--outline"><i class="fab fa-github"></i> GitHub</a>
+              </div>
+            </div>
+          </article>
+          <article class="project-card glass reveal" data-category="fullstack" hidden>
+            <div class="project-card__image">
+              <img src="assets/images/project-auth.svg" alt="Authentication System" loading="lazy">
+              <div class="project-card__overlay">
+                <a href="#" class="project-card__link" aria-label="Live demo"><i class="fas fa-external-link-alt"></i></a>
+                <a href="#" class="project-card__link" aria-label="GitHub"><i class="fab fa-github"></i></a>
+              </div>
+            </div>
+            <div class="project-card__body">
+              <h3 class="project-card__title">Authentication System</h3>
+              <p class="project-card__desc">Secure login/register with JWT, OAuth, password reset, and role-based access control.</p>
+              <ul class="project-card__features">
+                <li>JWT &amp; refresh tokens</li>
+                <li>Email verification</li>
+                <li>Protected routes</li>
+              </ul>
+              <div class="project-card__tech"><span>Node.js</span><span>Express</span><span>MySQL</span></div>
+              <div class="project-card__actions">
+                <a href="#" class="btn btn--sm btn--primary"><i class="fas fa-globe"></i> Live Demo</a>
+                <a href="#" class="btn btn--sm btn--outline"><i class="fab fa-github"></i> GitHub</a>
+              </div>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- Certificates -->
+    <section class="certificates section" id="certificates">
+      <div class="container">
+        <header class="section__header reveal">
+          <span class="section__tag">Achievements</span>
+          <h2 class="section__title">Certificates &amp; <span class="gradient-text">Credentials</span></h2>
+        </header>
+        <div class="certificates__grid">
+          <article class="cert-card glass reveal">
+            <div class="cert-card__icon"><i class="fas fa-graduation-cap"></i></div>
+            <h3 class="cert-card__title">CS50 Introduction to Computer Science</h3>
+            <p class="cert-card__org">Harvard University / edX</p>
+            <span class="cert-card__date">March 2024</span>
+            <a href="https://certificates.cs50.io/e1c2d139-b094-42a6-9c5f-494937d9f06f.png?size=letter" class="cert-card__btn btn btn--sm btn--outline">View Credential</a>
+          </article>
+          <article class="cert-card glass reveal">
+            <div class="cert-card__icon"><i class="fas fa-code"></i></div>
+            <h3 class="cert-card__title">CS50 Web Programming with Python &amp; JavaScript</h3>
+            <p class="cert-card__org">Harvard University / edX</p>
+            <span class="cert-card__date">Completed</span>
+            <a href="#" class="cert-card__btn btn btn--sm btn--outline">View Credential</a>
+          </article>
+          <article class="cert-card glass reveal">
+            <div class="cert-card__icon"><i class="fas fa-laptop-code"></i></div>
+            <h3 class="cert-card__title">Web Designer Track</h3>
+            <p class="cert-card__org">National Telecommunication Institute (NTI)</p>
+            <span class="cert-card__date">August 2025</span>
+            <a href="#" class="cert-card__btn btn btn--sm btn--outline">View Credential</a>
+          </article>
+          <article class="cert-card glass reveal">
+            <div class="cert-card__icon"><i class="fas fa-puzzle-piece"></i></div>
+            <h3 class="cert-card__title">SQL (Basic)</h3>
+            <p class="cert-card__org">HackerRank</p>
+            <span class="cert-card__date">Verified</span>
+            <a href="https://www.hackerrank.com/certificates/iframe/36f896a99f2a" class="cert-card__btn btn btn--sm btn--outline">View Credential</a>
+          </article>
+          <article class="cert-card glass reveal">
+            <div class="cert-card__icon"><i class="fas fa-puzzle-piece"></i></div>
+            <h3 class="cert-card__title">SQL (Intermediate)</h3>
+            <p class="cert-card__org">HackerRank</p>
+            <span class="cert-card__date">Verified</span>
+            <a href="https://www.hackerrank.com/certificates/iframe/2059f27654fc" class="cert-card__btn btn btn--sm btn--outline">View Credential</a>
+          </article>
+          <article class="cert-card glass reveal">
+            <div class="cert-card__icon"><i class="fas fa-award"></i></div>
+            <h3 class="cert-card__title">Foundational C# with Microsoft</h3>
+            <p class="cert-card__org">freeCodeCamp &amp; Microsoft Learn</p>
+            <span class="cert-card__date">Completed</span>
+            <a href="https://freecodecamp.org/certification/fcc1cbc52a0-7f13-4902-9683-8f54a4d76c3e/foundational-c-sharp-with-microsoft" class="cert-card__btn btn btn--sm btn--outline">View Credential</a>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- Services -->
+    <section class="services section" id="services">
+      <div class="container">
+        <header class="section__header reveal">
+          <span class="section__tag">Services</span>
+          <h2 class="section__title">What I <span class="gradient-text">Offer</span></h2>
+        </header>
+        <div class="services__grid">
+          <article class="service-card glass reveal">
+            <div class="service-card__icon"><i class="fas fa-code"></i></div>
+            <h3 class="service-card__title">Front-End Development</h3>
+            <p class="service-card__desc">Pixel-perfect interfaces built with modern HTML, CSS, and JavaScript.</p>
+            <ul class="service-card__list"><li>Component architecture</li><li>Cross-browser support</li><li>Performance tuning</li></ul>
+          </article>
+          <article class="service-card glass reveal">
+            <div class="service-card__icon"><i class="fas fa-mobile-alt"></i></div>
+            <h3 class="service-card__title">Responsive Web Design</h3>
+            <p class="service-card__desc">Mobile-first layouts that look stunning on every screen size.</p>
+            <ul class="service-card__list"><li>Fluid grids</li><li>Touch-friendly UI</li><li>Media queries</li></ul>
+          </article>
+          <article class="service-card glass reveal">
+            <div class="service-card__icon"><i class="fas fa-plug"></i></div>
+            <h3 class="service-card__title">API Integration</h3>
+            <p class="service-card__desc">Seamless connection between front-end and RESTful backends.</p>
+            <ul class="service-card__list"><li>REST &amp; fetch</li><li>Error handling</li><li>State management</li></ul>
+          </article>
+          <article class="service-card glass reveal">
+            <div class="service-card__icon"><i class="fas fa-paint-brush"></i></div>
+            <h3 class="service-card__title">UI/UX Implementation</h3>
+            <p class="service-card__desc">Transform Figma designs into interactive, accessible experiences.</p>
+            <ul class="service-card__list"><li>Design systems</li><li>Micro-interactions</li><li>WCAG accessibility</li></ul>
+          </article>
+          <article class="service-card glass reveal">
+            <div class="service-card__icon"><i class="fas fa-tachometer-alt"></i></div>
+            <h3 class="service-card__title">Website Optimization</h3>
+            <p class="service-card__desc">Speed up load times and improve Core Web Vitals.</p>
+            <ul class="service-card__list"><li>Lazy loading</li><li>Image optimization</li><li>Lighthouse audits</li></ul>
+          </article>
+          <article class="service-card glass reveal">
+            <div class="service-card__icon"><i class="fas fa-bug"></i></div>
+            <h3 class="service-card__title">Bug Fixing</h3>
+            <p class="service-card__desc">Quick diagnosis and resolution of front-end issues.</p>
+            <ul class="service-card__list"><li>Debugging</li><li>DevTools</li><li>Code review</li></ul>
+          </article>
+          <article class="service-card glass reveal">
+            <div class="service-card__icon"><i class="fas fa-id-card"></i></div>
+            <h3 class="service-card__title">Portfolio Creation</h3>
+            <p class="service-card__desc">Standout portfolios that showcase your skills and personality.</p>
+            <ul class="service-card__list"><li>Custom animations</li><li>SEO setup</li><li>Brand design</li></ul>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact -->
+    <section class="contact section" id="contact">
+      <div class="container">
+        <header class="section__header reveal">
+          <span class="section__tag">Contact</span>
+          <h2 class="section__title">Get In <span class="gradient-text">Touch</span></h2>
+          <p class="section__subtitle">Let's build something amazing together.</p>
+        </header>
+        <div class="contact__grid">
+          <form class="contact__form glass reveal" id="contactForm" novalidate>
+            <div class="form-group">
+              <label for="name">Full Name</label>
+              <input type="text" id="name" name="name" placeholder="Your name" required autocomplete="name">
+              <span class="form-error" id="nameError"></span>
+            </div>
+            <div class="form-group">
+              <label for="email">Email Address</label>
+              <input type="email" id="email" name="email" placeholder="your@email.com" required autocomplete="email">
+              <span class="form-error" id="emailError"></span>
+            </div>
+            <div class="form-group">
+              <label for="message">Message</label>
+              <textarea id="message" name="message" rows="5" placeholder="Your message..." required></textarea>
+              <span class="form-error" id="messageError"></span>
+            </div>
+            <button type="submit" class="btn btn--primary btn--submit">
+              <span class="btn__text">Send Message</span>
+              <i class="fas fa-paper-plane btn__icon" aria-hidden="true"></i>
+            </button>
+            <p class="form-success" id="formSuccess" hidden>Message sent successfully!</p>
+          </form>
+          <div class="contact__info reveal reveal--delay">
+            <div class="contact-card glass">
+              <i class="fas fa-envelope"></i>
+              <div><h4>Email</h4><a href="mailto:osamasobhy2906@gmail.com">osamasobhy2906@gmail.com</a></div>
+            </div>
+            <div class="contact-card glass">
+              <i class="fas fa-phone"></i>
+              <div><h4>WhatsApp</h4><a href="https://wa.me/01023848309">01023848309</a></div>
+            </div>
+            <div class="contact-card glass">
+              <i class="fas fa-map-marker-alt"></i>
+              <div><h4>Location</h4><p>Cairo, Egypt</p></div>
+            </div>
+            <div class="contact__social">
+              <a href="https://github.com/OsamaSobhy2006" target="_blank" rel="noopener" aria-label="GitHub"><i class="fab fa-github"></i></a>
+              <a href="https://www.linkedin.com/in/osama-sobhy-b569b7332?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" target="_blank" rel="noopener" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+              <a href="mailto:osamasobhy2906@gmail.com" aria-label="Email"><i class="fas fa-envelope"></i></a>
+            </div>
+            <div class="contact__map glass">
+              <iframe title="Cairo map" src="https://www.openstreetmap.org/export/embed.html?bbox=31.20%2C30.00%2C31.30%2C30.08&amp;layer=mapnik&amp;marker=30.0444%2C31.2357" loading="lazy"></iframe>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container footer__container">
+      <div class="footer__brand">
+        <a href="#home" class="footer__logo"><span>&lt;</span>OS<span>/&gt;</span></a>
+        <p>Software Engineer &amp; MEAN Stack Developer crafting modern web experiences.</p>
+      </div>
+      <nav class="footer__links" aria-label="Footer navigation">
+        <a href="#home">Home</a>
+        <a href="#about">About</a>
+        <a href="#projects">Projects</a>
+        <a href="#contact">Contact</a>
+      </nav>
+      <div class="footer__social">
+        <a href="https://github.com/OsamaSobhy2006" target="_blank" rel="noopener" aria-label="GitHub"><i class="fab fa-github"></i></a>
+        <a href="https://www.linkedin.com/in/osama-sobhy-b569b7332?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" target="_blank" rel="noopener" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+        <a href="mailto:osamasobhy2906@gmail.com" aria-label="Email"><i class="fas fa-envelope"></i></a>
+      </div>
+    </div>
+    <div class="footer__bottom container">
+      <p>&copy; <span id="year"></span> Osama Sobhy. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <button class="back-to-top" id="backToTop" type="button" aria-label="Back to top">
+    <i class="fas fa-arrow-up" aria-hidden="true"></i>
+  </button>
+
+  <script src="script.js"></script>
+</body>
+</html>
+
+
+
